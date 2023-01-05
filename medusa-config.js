@@ -40,6 +40,9 @@ const DATABASE_URL = `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_P
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
+const medusa = new Medusa({ baseUrl: MEDUSA_BACKEND_URL, maxRetries: 3, apiKey: '{api_token}' })
+
+
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
