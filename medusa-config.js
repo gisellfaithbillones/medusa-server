@@ -65,6 +65,7 @@ module.exports = {
     // For more production-like environment install PostgresQL
     database_url: DATABASE_URL,
     database_type: "postgres",
+	database_schema: process.env.DATABASE_SCHEMA,
 	database_extra: { ssl: { rejectUnauthorized: false } },
     // database_database: "./medusa-db.sql",
     // database_type: "sqlite",
